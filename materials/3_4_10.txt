@@ -1,0 +1,23 @@
+#!/bin/bash
+while [[ True ]]
+do
+    read birinchi amal ikkinichi
+    if [[ $birinchi == "exit" ]]
+    then
+        echo "bye"
+        break
+    echo "error"
+        break
+    else
+    case $amal in
+"+") let "result = birinchi+ikkinichi";;
+"-") let "result = birinchi-ikkinichi";;
+"*") let "result = birinchi*ikkinichi";;
+"/") let "result = birinchi/ikkinichi";;
+"%") let "result = birinchi%ikkinichi";;
+"**") let "result = birinchi**ikkinichi";;
+*) echo "error" ; break ;;
+    esac
+    echo "$result"
+    fi
+done
